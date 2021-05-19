@@ -52,19 +52,19 @@ public class MaximumNumberTest {
     @Test
     public void givenStringValue_whenAtFirstPosition_ShouldReturnMaxString() {
         String result = maximumNumber.findMaximumString("Apple", "Peach", "Banana");
-        Assert.assertEquals("Apple", result);
+        Assert.assertEquals("Peach", result);
     }
 
     @Test
     public void giveStringValue_whenAtSecondPosition_ShouldReturnMaxString() {
         String result = maximumNumber.findMaximumString("Banana", "Apple", "Peach");
-        Assert.assertEquals("Apple", result);
+        Assert.assertEquals("Peach", result);
     }
 
     @Test
     public void givenStringValue_whenAtThirdPosition_ShouldReturnMaxString() {
         String result = maximumNumber.findMaximumString("Peach", "Banana", "Apple");
-        Assert.assertEquals("Apple", result);
+        Assert.assertEquals("Peach", result);
     }
 
 

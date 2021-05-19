@@ -33,6 +33,17 @@ public class MaximumNumber {
         }
         return maximumValue;
     }
+    //use of generic to find max
+    public <T extends Comparable> T checkMaximum(T value1, T value2, T value3) { //T is used as generic object
+        T maxNum=value1;
+        if (value2.compareTo(maxNum)>0){
+            maxNum=value2;
+        }
+        if (value3.compareTo(maxNum)>0){
+            maxNum=value3;
+        }
+        return maxNum;
+    }
 
     public static void main(String[] args) {
         System.out.println("WElcome");
