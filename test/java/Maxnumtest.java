@@ -11,6 +11,7 @@ public class Maxnumtest {
     public void setUp() throws Exception {
         maximumNumber = new Maximumnum();
     }
+    //UC1 Integer
 
     @Test
     public void givenMaximumIntegerNumber_AtFirstPosition_ShouldReturnSameNumber() {
@@ -25,5 +26,24 @@ public class Maxnumtest {
     @Test
     public void givenMaximumNumber_AtThirdPosition_ShouldReturnSameNumber() {
         Assert.assertSame(80, maximumNumber.findMax(50, 30, 80));
+    }
+
+    //UC2 float
+    @Test
+    public void givenMaximumFloatNumber_whenAtFirstPosition_shouldReturnSameNumber() {
+        Float result = maximumNumber.findMaximumNumber(60.2f, 20.2f, 40.2f);
+        Assert.assertEquals(Float.valueOf(60.2f), result);
+    }
+
+    @Test
+    public void givenMaximumFloatNumber_whenAtSecondNumber_shouldReturnSameNumber() {
+        Float result = maximumNumber.findMaximumNumber(20.f, 60.2f, 40.2f);
+        Assert.assertEquals(Float.valueOf(60.2f), result);
+    }
+
+    @Test
+    public void givenMaximumNumber_whenAtThirdNumber_shouldReturnSameNumber() {
+        Float result = maximumNumber.findMaximumNumber(40.2f, 20.2f, 60.2f);
+        Assert.assertEquals(Float.valueOf(60.2f), result);
     }
 }
