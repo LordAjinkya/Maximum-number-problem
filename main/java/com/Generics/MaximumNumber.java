@@ -1,15 +1,29 @@
 package com.Generics;
 
-public class MaximumNumber {
-    public int findMaximumNumber(int num1, int num2, int num3) {
-        Integer maxNumber = num1;
-        if (maxNumber.compareTo(num2) < 0) {
-            maxNumber = num2;
+public class MaximumNumber<T extends Comparable<T>> {
+    private final T num1;
+    private final T num2;
+    private final T num3;
+
+    public MaximumNumber(T num1, T num2, T num3) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        
+    }
+
+    public T getCheckMaximum(){
+        return MaximumNumber.checkMaximum(num1,num2,num3);
+    }
+    public static<T extends Comparable> T checkMaximum(T num1, T num2, T num3){
+        T maxNum=num1;
+        if (num2.compareTo(maxNum)>0){
+            maxNum=num2;
         }
-        if (maxNumber.compareTo(num3) < 0) {
-            maxNumber = num3;
+        if (num3.compareTo(maxNum)>0){
+            maxNum=num3;
         }
-        return maxNumber;
+        return maxNum;
     }
 
     public Float findMaximumNumber(Float num1, Float num2, Float num3) {
@@ -33,17 +47,7 @@ public class MaximumNumber {
         }
         return maximumValue;
     }
-    //use of generic to find max
-    public <T extends Comparable> T checkMaximum(T value1, T value2, T value3) { //T is used as generic object
-        T maxNum=value1;
-        if (value2.compareTo(maxNum)>0){
-            maxNum=value2;
-        }
-        if (value3.compareTo(maxNum)>0){
-            maxNum=value3;
-        }
-        return maxNum;
-    }
+
 
     public static void main(String[] args) {
         System.out.println("WElcome");
