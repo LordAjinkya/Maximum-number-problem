@@ -7,25 +7,25 @@ import org.junit.jupiter.api.Assertions;
 public class MaximumNumberTest {
     MaximumNumber maximumNumber;
 
-    @Before
-    public void setUp() throws Exception {
-        maximumNumber = new MaximumNumber();
-    }
+
 
     //uc1
     @Test
     public void givenMaximumIntegerNumber_AtFirstPosition_ShouldReturnSameNumber() {
-        Assert.assertEquals(100, maximumNumber.findMaximumNumber(100, 70, 30));
+        Integer max = MaximumNumber.checkMaximum(250, 200, 150,100,50);
+        Assertions.assertEquals(12, max);
     }
 
     @Test
     public void givenMaximumIntegerNumber_AtSecondPosition_ShouldReturnSameNumber() {
-        Assert.assertEquals(50, maximumNumber.findMaximumNumber(20, 50, 10));
+        Integer max = MaximumNumber.checkMaximum(200, 250, 150,100,50);
+        Assertions.assertEquals(12, max);
     }
 
     @Test
     public void givenMaximumIntegerNumber_AtThirdPosition_ShouldReturnSameNumber() {
-        Assert.assertEquals(80, maximumNumber.findMaximumNumber(50, 30, 80));
+        Integer max = MaximumNumber.checkMaximum(200, 150, 250,100,50);
+        Assertions.assertEquals(12, max);
     }
 
     //uc2
