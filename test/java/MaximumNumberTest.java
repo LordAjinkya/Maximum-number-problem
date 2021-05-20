@@ -13,19 +13,19 @@ public class MaximumNumberTest {
     @Test
     public void givenMaximumIntegerNumber_AtFirstPosition_ShouldReturnSameNumber() {
         Integer max = MaximumNumber.checkMaximum(250, 200, 150,100,50);
-        Assertions.assertEquals(12, max);
+        Assertions.assertEquals(250, max);
     }
 
     @Test
     public void givenMaximumIntegerNumber_AtSecondPosition_ShouldReturnSameNumber() {
         Integer max = MaximumNumber.checkMaximum(200, 250, 150,100,50);
-        Assertions.assertEquals(12, max);
+        Assertions.assertEquals(250, max);
     }
 
     @Test
     public void givenMaximumIntegerNumber_AtThirdPosition_ShouldReturnSameNumber() {
         Integer max = MaximumNumber.checkMaximum(200, 150, 250,100,50);
-        Assertions.assertEquals(12, max);
+        Assertions.assertEquals(250, max);
     }
 
     //uc2

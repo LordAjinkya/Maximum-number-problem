@@ -27,7 +27,18 @@ public class MaximumNumber<T extends Comparable<T>> {
         if (num3.compareTo(maxNum)>0){
             maxNum=num3;
         }
+        if (num4.compareTo(maxNum)>0){
+            maxNum=num4;
+        }
+        if (num5.compareTo(maxNum)>0){
+            maxNum=num5;
+        }
+        printMax(maxNum);
+
         return maxNum;
+    }
+    public static <T> void printMax(T maxNum){
+        System.out.println("maximum number is: "+maxNum);
     }
 
     public Float findMaximumNumber(Float num1, Float num2, Float num3) {
@@ -38,6 +49,8 @@ public class MaximumNumber<T extends Comparable<T>> {
         if (maxNumber.compareTo(num3) < 0) {
             maxNumber = num3;
         }
+
+
         return maxNumber;
     }
     //code to find the max from the 3 strings
